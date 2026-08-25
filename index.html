@@ -3,201 +3,185 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="Blog individual da disciplina de Computação Visual — 2026.2.">
-  <meta name="theme-color" content="#0b1020">
-  <title>Computação Visual · GabrielBuck</title>
+  <meta name="description" content="Experimentos sobre Computação Visual — imagens, percepção, glitches e algoritmos.">
+  <meta name="theme-color" content="#090909">
+  <title>VISUAL_LAB // Computação Visual</title>
   <link rel="stylesheet" href="assets/css/style.css">
   <script defer src="assets/js/main.js"></script>
 </head>
 <body>
+  <div class="noise" aria-hidden="true"></div>
+  <div class="scanlines" aria-hidden="true"></div>
+  <div class="cursor-glow" id="cursor-glow" aria-hidden="true"></div>
+
   <header class="site-header">
     <a class="brand" href="index.html" aria-label="Página inicial">
-      <span class="brand-mark" aria-hidden="true"></span>
-      <span>computação visual</span>
+      <span class="brand-glyph">◉</span>
+      <span>VISUAL_LAB</span>
+      <small>26.2</small>
     </a>
     <nav class="nav" aria-label="Navegação principal">
-      <a href="#posts">Posts</a>
-      <a href="#sobre">Sobre</a>
-      <a href="#cronograma">Cronograma</a>
-      <a href="https://github.com/GabrielBuck" target="_blank" rel="noreferrer">GitHub ↗</a>
+      <a href="#experimentos">[experimentos]</a>
+      <a href="#manifesto">[manifesto]</a>
+      <a href="#timeline">[timeline]</a>
+      <a href="https://github.com/GabrielBuck/comp_visual" target="_blank" rel="noreferrer">[source ↗]</a>
     </nav>
   </header>
 
   <main>
     <section class="hero">
       <div class="hero-copy">
-        <p class="eyebrow">Mackenzie · Ciência da Computação · 2026.2</p>
-        <h1>Computação <span class="gradient-text">Visual</span></h1>
+        <div class="system-line"><span>SYS</span> percepção ≠ realidade</div>
+        <p class="eyebrow">Mackenzie // Ciência da Computação // 2026.2</p>
+        <h1>
+          <span class="ghost" data-text="COMPUTAÇÃO">COMPUTAÇÃO</span>
+          <span class="acid">VISUAL</span>
+        </h1>
         <p class="hero-text">
-          Um diário de exploração sobre imagens, gráficos, algoritmos e as formas
-          como computadores representam, transformam e interpretam o mundo visual.
+          Um arquivo de coisas estranhas que acontecem quando máquinas tentam
+          <strong>ver</strong>, <strong>inventar</strong> e <strong>enganar</strong> imagens.
         </p>
         <div class="hero-actions">
-          <a class="button primary" href="#posts">Explorar posts</a>
-          <a class="button secondary" href="posts/01-computacao-visual.html">Começar pelo Post 1</a>
+          <a class="button primary" href="#experimentos">ENTRAR NO LAB</a>
+          <a class="button secondary" href="posts/01-computacao-visual.html">EXP_001 →</a>
+        </div>
+        <div class="hero-tags" aria-label="Temas">
+          <span>pixels</span><span>glitches</span><span>visão</span><span>percepção</span><span>render</span><span>caos</span>
         </div>
       </div>
 
-      <div class="visual-card" aria-hidden="true">
-        <canvas id="hero-canvas" width="620" height="420"></canvas>
-        <div class="visual-caption">
-          <span>canvas://visual-computing</span>
-          <span class="status"><i></i> renderizando</span>
+      <div class="machine-window">
+        <div class="window-bar"><span>visual_engine.exe</span><span>— □ ×</span></div>
+        <canvas id="hero-canvas" width="680" height="520"></canvas>
+        <div class="window-status">
+          <span>FRAME <b id="frame-count">000000</b></span>
+          <span class="live"><i></i> LIVE</span>
+          <span>MOVE_CURSOR()</span>
         </div>
       </div>
     </section>
 
-    <section class="section" id="posts">
+    <div class="marquee" aria-hidden="true">
+      <div>THE IMAGE IS DATA ✦ THE IMAGE IS DATA ✦ THE IMAGE IS DATA ✦ THE IMAGE IS DATA ✦ THE IMAGE IS DATA ✦</div>
+    </div>
+
+    <section class="section" id="experimentos">
       <div class="section-heading">
         <div>
-          <p class="eyebrow">Publicações</p>
-          <h2>Diário da disciplina</h2>
+          <p class="eyebrow">/arquivo_de_experimentos</p>
+          <h2>8 coisas para olhar duas vezes.</h2>
         </div>
-        <p class="section-note">8 posts ao longo do semestre · N1 + N2</p>
+        <p class="section-note">N1 + N2 // 08 registros</p>
       </div>
 
-      <div class="posts-grid">
-        <article class="post-card featured">
-          <div class="card-top">
-            <span class="post-number">01</span>
-            <span class="pill published">Publicado</span>
-          </div>
-          <div>
-            <p class="post-meta"><time datetime="2026-08-25">25 ago 2026</time> · 5 min</p>
-            <h3><a href="posts/01-computacao-visual.html">O que eu imaginava — e o que entendi — sobre Computação Visual</a></h3>
-            <p>Das primeiras associações com gráficos e visão computacional a uma visão mais ampla da área e da proposta da disciplina.</p>
-          </div>
-          <a class="text-link" href="posts/01-computacao-visual.html">Ler publicação →</a>
+      <div class="experiment-grid">
+        <article class="experiment-card exp-01">
+          <div class="card-visual grid-visual"><span></span><span></span><span></span></div>
+          <div class="card-head"><span>EXP_001</span><span class="status-tag online">ONLINE</span></div>
+          <p class="post-meta">25.08.2026 // reflexão inicial</p>
+          <h3><a href="posts/01-computacao-visual.html">Eu achava que Computação Visual era uma coisa. Era umas cinco.</a></h3>
+          <p>O que eu esperava da disciplina e o que mudou quando percebi o tamanho do guarda-chuva.</p>
+          <a class="launch" href="posts/01-computacao-visual.html">ABRIR EXPERIMENTO ↗</a>
         </article>
 
-        <article class="post-card featured">
-          <div class="card-top">
-            <span class="post-number">02</span>
-            <span class="pill published">Publicado</span>
+        <article class="experiment-card exp-02">
+          <div class="card-visual face-visual">
+            <div class="face"><i class="eye a"></i><i class="eye b"></i><i class="nose"></i></div>
+            <div class="lens-ring"></div>
           </div>
-          <div>
-            <p class="post-meta"><time datetime="2026-08-25">25 ago 2026</time> · 7 min</p>
-            <h3><a href="posts/02-pixels-rgb.html">Como um computador enxerga uma imagem?</a></h3>
-            <p>Pixels, canais RGB, resolução, profundidade de cor e uma demonstração interativa para visualizar esses conceitos.</p>
-          </div>
-          <a class="text-link" href="posts/02-pixels-rgb.html">Ler publicação →</a>
+          <div class="card-head"><span>EXP_002</span><span class="status-tag online">ONLINE</span></div>
+          <p class="post-meta">25.08.2026 // óptica + projeção</p>
+          <h3><a href="posts/02-pixels-rgb.html">Por que sua cara fica estranha na câmera frontal?</a></h3>
+          <p>Distância, perspectiva, distância focal e a matemática por trás do “essa câmera me odeia”.</p>
+          <a class="launch" href="posts/02-pixels-rgb.html">ABRIR EXPERIMENTO ↗</a>
         </article>
 
-        <article class="post-card">
-          <div class="card-top">
-            <span class="post-number">03</span>
-            <span class="pill upcoming">03/09</span>
-          </div>
-          <div>
-            <p class="post-meta">Tema planejado</p>
-            <h3>Transformações 2D: mover, girar e redimensionar com matemática</h3>
-            <p>Como translação, rotação e escala podem ser descritas por matrizes e aplicadas a pontos e objetos.</p>
-          </div>
+        <article class="experiment-card exp-03">
+          <div class="card-visual jpeg-visual"><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i></div>
+          <div class="card-head"><span>EXP_003</span><span class="status-tag pending">03.09</span></div>
+          <p class="post-meta">compressão // artefatos</p>
+          <h3>Quantas vezes dá para salvar um JPEG antes dele morrer?</h3>
+          <p>Uma imagem recomprimida de novo, de novo e de novo — até blocos, ringing e cores estranhas virarem a própria estética.</p>
+          <span class="launch disabled-link">AGUARDANDO DADOS...</span>
         </article>
 
-        <article class="post-card">
-          <div class="card-top">
-            <span class="post-number">04</span>
-            <span class="pill upcoming">17/09</span>
-          </div>
-          <div>
-            <p class="post-meta">Tema planejado</p>
-            <h3>Rasterização: quando geometria vira pixel</h3>
-            <p>Uma exploração de como linhas, triângulos e outras formas chegam à tela discreta que enxergamos.</p>
-          </div>
+        <article class="experiment-card exp-04">
+          <div class="card-visual detect-visual"><div class="detect-box">FACE?<b>97%</b></div><span>+</span></div>
+          <div class="card-head"><span>EXP_004</span><span class="status-tag pending">17.09</span></div>
+          <p class="post-meta">detecção // landmarks</p>
+          <h3>Como o celular sabe exatamente onde está a sua cara?</h3>
+          <p>Do retângulo em volta do rosto aos pontos que seguem olhos, nariz e boca em filtros e desbloqueios.</p>
+          <span class="launch disabled-link">AGUARDANDO DADOS...</span>
         </article>
 
-        <article class="post-card">
-          <div class="card-top">
-            <span class="post-number">05</span>
-            <span class="pill upcoming">01/10</span>
-          </div>
-          <div>
-            <p class="post-meta">Tema planejado</p>
-            <h3>Filtros de imagem e convolução</h3>
-            <p>Blur, nitidez e detecção de bordas vistos como operações locais sobre uma matriz de pixels.</p>
-          </div>
+        <article class="experiment-card exp-05">
+          <div class="card-visual steg-visual"><div>01001000<br>01001001<br>01000100<br>01000101</div><b>HIDDEN</b></div>
+          <div class="card-head"><span>EXP_005</span><span class="status-tag pending">01.10</span></div>
+          <p class="post-meta">esteganografia // bits</p>
+          <h3>Dá para esconder uma imagem dentro de outra sem ninguém perceber?</h3>
+          <p>LSB, canais de cor e a ideia de usar pixels não só para mostrar informação, mas também para escondê-la.</p>
+          <span class="launch disabled-link">AGUARDANDO DADOS...</span>
         </article>
 
-        <article class="post-card">
-          <div class="card-top">
-            <span class="post-number">06</span>
-            <span class="pill upcoming">15/10</span>
-          </div>
-          <div>
-            <p class="post-meta">Tema planejado</p>
-            <h3>Da imagem à informação: visão computacional</h3>
-            <p>O que muda quando o objetivo deixa de gerar uma imagem e passa a extrair significado dela.</p>
-          </div>
+        <article class="experiment-card exp-06">
+          <div class="card-visual illusion-visual"><i></i><i></i><i></i><i></i><i></i></div>
+          <div class="card-head"><span>EXP_006</span><span class="status-tag pending">15.10</span></div>
+          <p class="post-meta">percepção // visão computacional</p>
+          <h3>Se uma ilusão engana você, ela também engana uma IA?</h3>
+          <p>Ilusões humanas, padrões adversariais e o desconforto de descobrir que “ver” nunca foi tão objetivo quanto parece.</p>
+          <span class="launch disabled-link">AGUARDANDO DADOS...</span>
         </article>
 
-        <article class="post-card">
-          <div class="card-top">
-            <span class="post-number">07</span>
-            <span class="pill upcoming">29/10</span>
-          </div>
-          <div>
-            <p class="post-meta">Tema planejado</p>
-            <h3>Do 2D ao 3D: o pipeline gráfico em perspectiva</h3>
-            <p>Modelos, câmera, projeção, iluminação e renderização conectados em uma visão geral do pipeline 3D.</p>
-          </div>
+        <article class="experiment-card exp-07">
+          <div class="card-visual shader-visual"><div class="orb"></div><span>LIGHT != REAL</span></div>
+          <div class="card-head"><span>EXP_007</span><span class="status-tag pending">29.10</span></div>
+          <p class="post-meta">shaders // iluminação</p>
+          <h3>Como um videogame inventa uma luz que não existe?</h3>
+          <p>Normais, shaders, sombras e os truques usados para fazer alguns milhões de pixels parecerem um mundo iluminado.</p>
+          <span class="launch disabled-link">AGUARDANDO DADOS...</span>
         </article>
 
-        <article class="post-card">
-          <div class="card-top">
-            <span class="post-number">08</span>
-            <span class="pill upcoming">12/11</span>
-          </div>
-          <div>
-            <p class="post-meta">Reflexão final</p>
-            <h3>O que mudou na minha forma de enxergar Computação Visual</h3>
-            <p>Uma revisão das publicações do semestre e do que a disciplina acrescentou à visão inicial apresentada no primeiro post.</p>
-          </div>
+        <article class="experiment-card exp-08">
+          <div class="card-visual archive-visual"><span>01</span><span>02</span><span>03</span><span>04</span><span>05</span><span>06</span><span>07</span><b>08</b></div>
+          <div class="card-head"><span>EXP_008</span><span class="status-tag pending">12.11</span></div>
+          <p class="post-meta">reflexão final // obrigatório</p>
+          <h3>Depois de oito posts, ainda existe “ver” sem computar?</h3>
+          <p>Voltando ao primeiro registro para descobrir o que mudou na minha ideia de imagem, percepção e Computação Visual.</p>
+          <span class="launch disabled-link">ARQUIVO INCOMPLETO...</span>
         </article>
       </div>
     </section>
 
-    <section class="section split-section" id="sobre">
+    <section class="section manifesto" id="manifesto">
+      <div class="manifesto-label">MANIFESTO.txt</div>
       <div>
-        <p class="eyebrow">Sobre</p>
-        <h2>Por que este blog existe?</h2>
-      </div>
-      <div class="prose-lite">
-        <p>
-          Este blog acompanha a disciplina de <strong>Computação Visual</strong> durante o segundo semestre de 2026.
-          A proposta é registrar, a cada publicação, algum conceito, tecnologia, aplicação ou pergunta que ajude
-          a construir uma visão mais concreta da área.
-        </p>
-        <p>
-          Mais do que resumir aulas, a ideia é usar cada post como uma pequena investigação: entender um conceito,
-          relacioná-lo com aplicações reais e, sempre que fizer sentido, experimentar com código.
-        </p>
+        <p class="big-quote">“Não quero que este blog pareça um resumo de aula.”</p>
+        <p>Quero usar cada postagem como desculpa para desmontar alguma coisa visual que parece banal até você perguntar <em>como isso funciona?</em></p>
+        <p>Uma selfie, um JPEG horrível, um filtro, uma ilusão, um shader. O tema muda; a pergunta continua sendo a mesma: <strong>o que o computador está realmente fazendo com o que enxergamos?</strong></p>
       </div>
     </section>
 
-    <section class="section" id="cronograma">
+    <section class="section" id="timeline">
       <div class="section-heading">
-        <div>
-          <p class="eyebrow">Cronograma</p>
-          <h2>8 marcos do semestre</h2>
-        </div>
+        <div><p class="eyebrow">/deadlines</p><h2>Linha do tempo</h2></div>
+        <p class="section-note">não alimentar depois da meia-noite</p>
       </div>
       <div class="timeline">
-        <div class="timeline-item done"><span>01</span><strong>27/08</strong><p>Expectativas + entendimento da disciplina</p></div>
-        <div class="timeline-item done"><span>02</span><strong>27/08</strong><p>Tema livre pertinente</p></div>
-        <div class="timeline-item"><span>03</span><strong>03/09</strong><p>Tema livre pertinente</p></div>
-        <div class="timeline-item"><span>04</span><strong>17/09</strong><p>Tema livre pertinente</p></div>
-        <div class="timeline-item"><span>05</span><strong>01/10</strong><p>Tema livre pertinente</p></div>
-        <div class="timeline-item"><span>06</span><strong>15/10</strong><p>Tema livre pertinente</p></div>
-        <div class="timeline-item"><span>07</span><strong>29/10</strong><p>Tema livre pertinente</p></div>
-        <div class="timeline-item"><span>08</span><strong>12/11</strong><p>Reflexão final</p></div>
+        <div class="timeline-item done"><span>001</span><strong>27/08</strong><p>expectativas</p></div>
+        <div class="timeline-item done"><span>002</span><strong>27/08</strong><p>tema livre</p></div>
+        <div class="timeline-item"><span>003</span><strong>03/09</strong><p>tema livre</p></div>
+        <div class="timeline-item"><span>004</span><strong>17/09</strong><p>tema livre</p></div>
+        <div class="timeline-item"><span>005</span><strong>01/10</strong><p>tema livre</p></div>
+        <div class="timeline-item"><span>006</span><strong>15/10</strong><p>tema livre</p></div>
+        <div class="timeline-item"><span>007</span><strong>29/10</strong><p>tema livre</p></div>
+        <div class="timeline-item"><span>008</span><strong>12/11</strong><p>reflexão final</p></div>
       </div>
     </section>
   </main>
 
   <footer class="footer">
-    <p>Computação Visual · 2026.2</p>
-    <p>Feito para GitHub Pages por <a href="https://github.com/GabrielBuck">GabrielBuck</a>.</p>
+    <p>VISUAL_LAB // Computação Visual 2026.2</p>
+    <p>GabrielBuck · <a href="https://github.com/GabrielBuck/comp_visual">source_code ↗</a></p>
   </footer>
 </body>
 </html>
