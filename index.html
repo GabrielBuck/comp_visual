@@ -1,0 +1,203 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Blog individual da disciplina de Computação Visual — 2026.2.">
+  <meta name="theme-color" content="#0b1020">
+  <title>Computação Visual · GabrielBuck</title>
+  <link rel="stylesheet" href="assets/css/style.css">
+  <script defer src="assets/js/main.js"></script>
+</head>
+<body>
+  <header class="site-header">
+    <a class="brand" href="index.html" aria-label="Página inicial">
+      <span class="brand-mark" aria-hidden="true"></span>
+      <span>computação visual</span>
+    </a>
+    <nav class="nav" aria-label="Navegação principal">
+      <a href="#posts">Posts</a>
+      <a href="#sobre">Sobre</a>
+      <a href="#cronograma">Cronograma</a>
+      <a href="https://github.com/GabrielBuck" target="_blank" rel="noreferrer">GitHub ↗</a>
+    </nav>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div class="hero-copy">
+        <p class="eyebrow">Mackenzie · Ciência da Computação · 2026.2</p>
+        <h1>Computação <span class="gradient-text">Visual</span></h1>
+        <p class="hero-text">
+          Um diário de exploração sobre imagens, gráficos, algoritmos e as formas
+          como computadores representam, transformam e interpretam o mundo visual.
+        </p>
+        <div class="hero-actions">
+          <a class="button primary" href="#posts">Explorar posts</a>
+          <a class="button secondary" href="posts/01-computacao-visual.html">Começar pelo Post 1</a>
+        </div>
+      </div>
+
+      <div class="visual-card" aria-hidden="true">
+        <canvas id="hero-canvas" width="620" height="420"></canvas>
+        <div class="visual-caption">
+          <span>canvas://visual-computing</span>
+          <span class="status"><i></i> renderizando</span>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="posts">
+      <div class="section-heading">
+        <div>
+          <p class="eyebrow">Publicações</p>
+          <h2>Diário da disciplina</h2>
+        </div>
+        <p class="section-note">8 posts ao longo do semestre · N1 + N2</p>
+      </div>
+
+      <div class="posts-grid">
+        <article class="post-card featured">
+          <div class="card-top">
+            <span class="post-number">01</span>
+            <span class="pill published">Publicado</span>
+          </div>
+          <div>
+            <p class="post-meta"><time datetime="2026-08-25">25 ago 2026</time> · 5 min</p>
+            <h3><a href="posts/01-computacao-visual.html">O que eu imaginava — e o que entendi — sobre Computação Visual</a></h3>
+            <p>Das primeiras associações com gráficos e visão computacional a uma visão mais ampla da área e da proposta da disciplina.</p>
+          </div>
+          <a class="text-link" href="posts/01-computacao-visual.html">Ler publicação →</a>
+        </article>
+
+        <article class="post-card featured">
+          <div class="card-top">
+            <span class="post-number">02</span>
+            <span class="pill published">Publicado</span>
+          </div>
+          <div>
+            <p class="post-meta"><time datetime="2026-08-25">25 ago 2026</time> · 7 min</p>
+            <h3><a href="posts/02-pixels-rgb.html">Como um computador enxerga uma imagem?</a></h3>
+            <p>Pixels, canais RGB, resolução, profundidade de cor e uma demonstração interativa para visualizar esses conceitos.</p>
+          </div>
+          <a class="text-link" href="posts/02-pixels-rgb.html">Ler publicação →</a>
+        </article>
+
+        <article class="post-card">
+          <div class="card-top">
+            <span class="post-number">03</span>
+            <span class="pill upcoming">03/09</span>
+          </div>
+          <div>
+            <p class="post-meta">Tema planejado</p>
+            <h3>Transformações 2D: mover, girar e redimensionar com matemática</h3>
+            <p>Como translação, rotação e escala podem ser descritas por matrizes e aplicadas a pontos e objetos.</p>
+          </div>
+        </article>
+
+        <article class="post-card">
+          <div class="card-top">
+            <span class="post-number">04</span>
+            <span class="pill upcoming">17/09</span>
+          </div>
+          <div>
+            <p class="post-meta">Tema planejado</p>
+            <h3>Rasterização: quando geometria vira pixel</h3>
+            <p>Uma exploração de como linhas, triângulos e outras formas chegam à tela discreta que enxergamos.</p>
+          </div>
+        </article>
+
+        <article class="post-card">
+          <div class="card-top">
+            <span class="post-number">05</span>
+            <span class="pill upcoming">01/10</span>
+          </div>
+          <div>
+            <p class="post-meta">Tema planejado</p>
+            <h3>Filtros de imagem e convolução</h3>
+            <p>Blur, nitidez e detecção de bordas vistos como operações locais sobre uma matriz de pixels.</p>
+          </div>
+        </article>
+
+        <article class="post-card">
+          <div class="card-top">
+            <span class="post-number">06</span>
+            <span class="pill upcoming">15/10</span>
+          </div>
+          <div>
+            <p class="post-meta">Tema planejado</p>
+            <h3>Da imagem à informação: visão computacional</h3>
+            <p>O que muda quando o objetivo deixa de gerar uma imagem e passa a extrair significado dela.</p>
+          </div>
+        </article>
+
+        <article class="post-card">
+          <div class="card-top">
+            <span class="post-number">07</span>
+            <span class="pill upcoming">29/10</span>
+          </div>
+          <div>
+            <p class="post-meta">Tema planejado</p>
+            <h3>Do 2D ao 3D: o pipeline gráfico em perspectiva</h3>
+            <p>Modelos, câmera, projeção, iluminação e renderização conectados em uma visão geral do pipeline 3D.</p>
+          </div>
+        </article>
+
+        <article class="post-card">
+          <div class="card-top">
+            <span class="post-number">08</span>
+            <span class="pill upcoming">12/11</span>
+          </div>
+          <div>
+            <p class="post-meta">Reflexão final</p>
+            <h3>O que mudou na minha forma de enxergar Computação Visual</h3>
+            <p>Uma revisão das publicações do semestre e do que a disciplina acrescentou à visão inicial apresentada no primeiro post.</p>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <section class="section split-section" id="sobre">
+      <div>
+        <p class="eyebrow">Sobre</p>
+        <h2>Por que este blog existe?</h2>
+      </div>
+      <div class="prose-lite">
+        <p>
+          Este blog acompanha a disciplina de <strong>Computação Visual</strong> durante o segundo semestre de 2026.
+          A proposta é registrar, a cada publicação, algum conceito, tecnologia, aplicação ou pergunta que ajude
+          a construir uma visão mais concreta da área.
+        </p>
+        <p>
+          Mais do que resumir aulas, a ideia é usar cada post como uma pequena investigação: entender um conceito,
+          relacioná-lo com aplicações reais e, sempre que fizer sentido, experimentar com código.
+        </p>
+      </div>
+    </section>
+
+    <section class="section" id="cronograma">
+      <div class="section-heading">
+        <div>
+          <p class="eyebrow">Cronograma</p>
+          <h2>8 marcos do semestre</h2>
+        </div>
+      </div>
+      <div class="timeline">
+        <div class="timeline-item done"><span>01</span><strong>27/08</strong><p>Expectativas + entendimento da disciplina</p></div>
+        <div class="timeline-item done"><span>02</span><strong>27/08</strong><p>Tema livre pertinente</p></div>
+        <div class="timeline-item"><span>03</span><strong>03/09</strong><p>Tema livre pertinente</p></div>
+        <div class="timeline-item"><span>04</span><strong>17/09</strong><p>Tema livre pertinente</p></div>
+        <div class="timeline-item"><span>05</span><strong>01/10</strong><p>Tema livre pertinente</p></div>
+        <div class="timeline-item"><span>06</span><strong>15/10</strong><p>Tema livre pertinente</p></div>
+        <div class="timeline-item"><span>07</span><strong>29/10</strong><p>Tema livre pertinente</p></div>
+        <div class="timeline-item"><span>08</span><strong>12/11</strong><p>Reflexão final</p></div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <p>Computação Visual · 2026.2</p>
+    <p>Feito para GitHub Pages por <a href="https://github.com/GabrielBuck">GabrielBuck</a>.</p>
+  </footer>
+</body>
+</html>
