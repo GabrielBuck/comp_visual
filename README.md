@@ -7,12 +7,12 @@ Blog individual da disciplina de **Computação Visual**, publicado com **GitHub
 | # | Prazo | Tema | Status |
 |---|---|---|---|
 | 1 | 27/08 | O que eu achava que veria + o que entendi que estudaremos | ✅ pronto |
-| 2 | 27/08 | Como um computador enxerga uma imagem? Pixels e RGB | ✅ pronto |
-| 3 | 03/09 | Transformações geométricas 2D | planejado |
-| 4 | 17/09 | Rasterização | planejado |
-| 5 | 01/10 | Filtros e convolução | planejado |
-| 6 | 15/10 | Visão computacional | planejado |
-| 7 | 29/10 | Pipeline gráfico 3D | planejado |
+| 2 | 27/08 | Por que sua cara fica estranha na câmera frontal? | ✅ pronto |
+| 3 | 03/09 | Quantas vezes dá para salvar um JPEG antes dele morrer? | planejado |
+| 4 | 17/09 | Como o celular sabe exatamente onde está a sua cara? | planejado |
+| 5 | 01/10 | Dá para esconder uma imagem dentro de outra sem ninguém perceber? | planejado |
+| 6 | 15/10 | Se uma ilusão engana você, ela também engana uma IA? | planejado |
+| 7 | 29/10 | Como um videogame inventa uma luz que não existe? | planejado |
 | 8 | 12/11 | Reflexão sobre o blog e a disciplina | planejado |
 
 ## Estrutura
@@ -25,11 +25,14 @@ Blog individual da disciplina de **Computação Visual**, publicado com **GitHub
 │   ├── css
 │   │   └── style.css
 │   └── js
-│       ├── main.js
-│       └── pixel-demo.js
+│       └── perspective-demo.js
+│   └── images
+│       └── post-02
+│           ├── distancia-focal.jpg
+│           └── perspectiva-grande-angular.jpg
 └── posts
     ├── 01-computacao-visual.html
-    └── 02-pixels-rgb.html
+    └── 02-camera-frontal-perspectiva.html
 ```
 
 ## Publicar no GitHub Pages
