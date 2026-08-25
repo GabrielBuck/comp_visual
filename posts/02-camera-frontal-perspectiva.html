@@ -1,0 +1,148 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Por que o rosto parece diferente na câmera frontal? Uma explicação visual sobre perspectiva, distância, grande-angular, distância focal e campo de visão.">
+  <meta name="theme-color" content="#f6f5f1">
+  <link rel="canonical" href="https://gabrielbuck.github.io/comp_visual/posts/02-camera-frontal-perspectiva.html">
+  <meta property="og:type" content="article">
+  <meta property="og:locale" content="pt_BR">
+  <meta property="og:title" content="Por que sua cara fica estranha na câmera frontal?">
+  <meta property="og:description" content="Distância, perspectiva e campo de visão explicam por que algumas selfies mudam as proporções do rosto.">
+  <meta property="og:url" content="https://gabrielbuck.github.io/comp_visual/posts/02-camera-frontal-perspectiva.html">
+  <meta property="og:image" content="https://gabrielbuck.github.io/comp_visual/assets/images/post-02/perspectiva-grande-angular.jpg">
+  <title>Por que sua cara fica estranha na câmera frontal? · Computação Visual</title>
+  <link rel="stylesheet" href="../assets/css/style.css?v=editorial-20260825-2">
+</head>
+<body>
+  <a class="skip-link" href="#conteudo">Pular para o conteúdo</a>
+  <header class="site-header">
+    <a class="brand" href="../index.html" aria-label="Computação Visual — página inicial">
+      <span class="brand-mark" aria-hidden="true">CV</span>
+      <span>Computação Visual</span>
+    </a>
+    <nav class="nav" aria-label="Navegação principal">
+      <a href="../index.html">Home</a>
+      <a href="../index.html#posts">Posts</a>
+      <a href="../index.html#sobre">Sobre</a>
+      <a href="../index.html#cronograma">Cronograma</a>
+      <a href="https://github.com/GabrielBuck/comp_visual" target="_blank" rel="noreferrer">GitHub <span aria-hidden="true">↗</span></a>
+    </nav>
+  </header>
+
+  <main id="conteudo">
+    <div class="article-shell">
+      <article>
+        <header class="article-header">
+          <a class="back-link" href="../index.html#posts">← Voltar para os posts</a>
+          <p class="eyebrow">Post 02 · óptica e projeção</p>
+          <h1>Por que sua cara fica estranha na câmera frontal?</h1>
+          <p class="article-lead">A câmera não inventou outro nariz. Ela só ficou perto demais dele — e projeção perspectiva é implacável com centímetros.</p>
+          <div class="article-meta">
+            <time datetime="2026-08-25">25 de agosto de 2026</time><span aria-hidden="true">·</span><span>8 min de leitura</span>
+          </div>
+          <ul class="tag-list" aria-label="Tags do post"><li>perspectiva</li><li>câmeras</li><li>distância focal</li><li>field of view</li></ul>
+        </header>
+      </article>
+    </div>
+
+    <figure class="article-hero">
+      <img src="../assets/images/post-02/perspectiva-grande-angular.jpg" alt="Montagem com a mesma pessoa no centro e nas bordas de uma fotografia feita com lente grande-angular" width="960" height="544">
+      <figcaption>Nas bordas de uma grande-angular, a pessoa fica visivelmente esticada. Esse é um efeito óptico diferente da mudança de proporção causada pela câmera muito próxima, mas os dois podem aparecer numa selfie. Foto: Bech, CC BY-SA 4.0.</figcaption>
+    </figure>
+
+    <div class="article-shell">
+      <article>
+        <div class="article-body">
+          <h2>O nariz não cresceu. A distância encolheu.</h2>
+          <p>A câmera frontal costuma ficar a 30 ou 40 centímetros do rosto. Nessa distância, a ponta do nariz pode estar proporcionalmente muito mais perto da lente que as orelhas. No espelho, visto de mais longe, essa diferença é pequena. Na selfie, ela pesa.</p>
+          <p>Uma câmera registra cada ponto do rosto numa projeção. Quanto mais perto um ponto está, maior ele aparece no plano da imagem. O nariz avança alguns centímetros em relação às bochechas e às orelhas; quando a câmera também está a poucos centímetros, essa vantagem vira uma ampliação perceptível.</p>
+
+          <div class="equation" role="img" aria-label="Tamanho na imagem é aproximadamente igual a tamanho real vezes distância focal, dividido pela distância até a câmera">tamanho na imagem ≈ tamanho real × distância focal ÷ distância até a câmera</div>
+
+          <p>A fórmula é simplificada, mas mostra o que interessa aqui: reduzir a distância no denominador aumenta o tamanho projetado. E esse aumento não é igual para todas as partes de um objeto tridimensional.</p>
+
+          <figure class="article-figure">
+            <div class="projection-diagram" aria-label="Diagrama de raios saindo da câmera e alcançando um rosto">
+              <div class="camera-shape">CÂMERA</div><div class="rays"></div><div class="projection-face" aria-hidden="true">•‿•</div>
+              <div class="projection-labels"><span>ponto de vista</span><span>campo de visão</span><span>rosto em profundidade</span></div>
+            </div>
+            <figcaption>A projeção transforma uma cena 3D em uma imagem 2D. A posição da câmera decide de onde esses raios “enxergam” a cena.</figcaption>
+          </figure>
+
+          <h2>Perspectiva, lente e distorção não são a mesma coisa</h2>
+          <p>É comum colocar toda a culpa na grande-angular. Ela participa da situação, mas de um jeito indireto: um campo de visão amplo permite enquadrar o rosto inteiro mesmo com o celular muito perto. Se a câmera frontal tivesse um campo estreito, talvez aparecesse apenas um olho — não seria uma selfie muito prática.</p>
+          <p>A <strong>distância focal</strong>, combinada ao tamanho do sensor, determina o <em>field of view</em>, ou campo de visão. Uma distância focal curta costuma produzir um campo mais aberto. Para manter o mesmo rosto preenchendo o quadro com uma lente mais longa, o fotógrafo precisa se afastar. É esse recuo que muda a perspectiva e deixa as proporções mais próximas do que estamos acostumados a ver.</p>
+
+          <div class="callout">
+            <strong>O teste que separa as duas coisas</strong>
+            <p>Duas fotos feitas do mesmo ponto, com lentes diferentes, têm a mesma perspectiva. Se a foto mais aberta for recortada para igualar o enquadramento, as proporções coincidem. A perspectiva muda quando a câmera muda de posição.</p>
+          </div>
+
+          <p>Também existe a <strong>distorção da lente</strong>. Lentes reais podem curvar linhas ou esticar regiões próximas das bordas. Fabricantes corrigem parte disso por software, mas a correção não apaga a perspectiva criada por uma câmera colada no rosto. São fenômenos diferentes que frequentemente chegam juntos no mesmo pacote.</p>
+
+          <figure class="article-figure comparison-image">
+            <img src="../assets/images/post-02/distancia-focal.jpg" alt="Seis fotografias comparando a mesma cena em diferentes distâncias e distâncias focais, mantendo o objeto da frente no mesmo tamanho" width="300" height="600">
+            <figcaption>A câmera se afasta enquanto a distância focal aumenta. O objeto da frente mantém o tamanho, mas a relação com o fundo muda. Fotos: Jcbrooks, CC BY-SA 3.0.</figcaption>
+          </figure>
+
+          <h2>Mexa na distância</h2>
+          <p>O desenho abaixo exagera o efeito para deixá-lo legível. Conforme a câmera se aproxima, o nariz cresce mais rápido que o contorno do rosto. Não é um simulador óptico preciso; é uma forma de visualizar a proporção que a fórmula descreve.</p>
+
+          <section class="perspective-demo" aria-labelledby="demo-title">
+            <h3 id="demo-title">Distância câmera–rosto</h3>
+            <div class="demo-stage" aria-hidden="true">
+              <div class="demo-camera">CÂMERA</div>
+              <div class="demo-distance-line" data-distance="70 cm"></div>
+              <div class="demo-face"><span class="demo-nose"></span><span class="demo-mouth"></span></div>
+            </div>
+            <div class="demo-controls">
+              <label for="distance-range"><span>perto</span><output id="distance-output" for="distance-range">70 cm</output><span>longe</span></label>
+              <input id="distance-range" type="range" min="30" max="120" value="70" step="1" aria-describedby="demo-help">
+              <p class="demo-caption" id="demo-help">Arraste o controle e observe a proporção do nariz em relação ao rosto.</p>
+            </div>
+          </section>
+
+          <h2>Por que afastar o celular costuma funcionar</h2>
+          <p>Ao afastar a câmera, a diferença entre a distância até o nariz e a distância até as orelhas fica menos importante em termos proporcionais. Se a ponta do nariz está 10 centímetros à frente das orelhas, essa diferença pesa muito mais numa foto feita a 30 centímetros do que numa feita a 1,2 metro.</p>
+          <p>Depois é possível usar zoom óptico ou recortar a foto para recuperar o enquadramento. O rosto ocupa o mesmo espaço final, mas foi observado de outro ponto. É por isso que o “modo retrato” com uma câmera mais longa e alguma distância costuma parecer mais natural.</p>
+
+          <blockquote>A lente escolhe quanto da cena cabe no quadro. A posição da câmera escolhe a perspectiva.</blockquote>
+
+          <h2>E o espelho?</h2>
+          <p>Ainda sobra uma pequena traição psicológica. Estamos habituados à versão horizontalmente invertida do nosso rosto. Muitos aplicativos mostram a prévia espelhada e salvam a foto sem essa inversão. Como nenhum rosto é perfeitamente simétrico, a versão final parece errada só por ser menos familiar.</p>
+          <p>Ou seja: a câmera frontal pode juntar perspectiva de perto, campo de visão aberto, alguma distorção de lente e uma imagem que não está espelhada como você esperava. Ela não odeia você. Só reuniu várias decisões técnicas pouco diplomáticas na mesma tela.</p>
+
+          <section class="takeaway" aria-labelledby="takeaway-title">
+            <h2 id="takeaway-title">O que eu tirei disso</h2>
+            <p>Uma imagem não é uma janela neutra para o mundo. Antes de virar arquivo, ela já depende de posição, projeção, lente, sensor e correções de software. A selfie estranha é uma aula curta de geometria que aparece justamente porque a câmera fez tudo certo.</p>
+            <p>O teste mais simples continua sendo o melhor: afaste o celular, faça outra foto e recorte depois. A autoestima agradece; a perspectiva também.</p>
+          </section>
+
+          <section class="references" aria-labelledby="references-title">
+            <h2 id="references-title">Referências e créditos</h2>
+            <ul>
+              <li><a href="https://commons.wikimedia.org/wiki/File:Perspective_grand_angle.jpg" target="_blank" rel="noreferrer">“Perspective grand angle”</a>, Bech — CC BY-SA 4.0.</li>
+              <li><a href="https://commons.wikimedia.org/wiki/File:Focal_length.jpg" target="_blank" rel="noreferrer">“Focal length”</a>, Jcbrooks — CC BY-SA 3.0.</li>
+              <li><a href="https://en.wikipedia.org/wiki/Perspective_distortion" target="_blank" rel="noreferrer">Perspective distortion</a> — definição e exemplos fotográficos.</li>
+              <li>Richard Szeliski, <cite>Computer Vision: Algorithms and Applications</cite>, capítulo sobre modelos de câmera.</li>
+            </ul>
+          </section>
+        </div>
+
+        <nav class="post-nav" aria-label="Navegação entre posts">
+          <a href="01-computacao-visual.html">← Eu achava que era uma coisa</a>
+          <span class="disabled">Próximo post em 03/09 →</span>
+        </nav>
+      </article>
+    </div>
+  </main>
+
+  <footer class="footer">
+    <p><a href="../index.html">Computação Visual</a> · 2026.2</p>
+    <p>Gabriel Buck · <a href="https://github.com/GabrielBuck/comp_visual">GitHub</a></p>
+  </footer>
+  <script src="../assets/js/perspective-demo.js?v=editorial-20260825-2"></script>
+</body>
+</html>
