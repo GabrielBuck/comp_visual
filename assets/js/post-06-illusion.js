@@ -1,0 +1,1 @@
+(() => { const stage=document.getElementById('illusion-stage'); const button=document.getElementById('illusion-toggle'); if(!stage||!button)return; button.addEventListener('click',()=>{const neutral=stage.classList.toggle('neutral');button.setAttribute('aria-pressed',String(neutral));button.textContent=neutral?'Restaurar contexto':'Remover o contexto';}); })();

@@ -1,59 +1,84 @@
-# Computação Visual — Blog individual (2026.2)
+# Computação Visual — 2026.2
 
-Blog individual da disciplina de **Computação Visual**, publicado com **GitHub Pages**.
+Blog individual da disciplina de Computação Visual, publicado com GitHub Pages.
 
-## Publicações
+**Site:** https://gabrielbuck.github.io/comp_visual/
 
-| # | Prazo | Tema | Status |
-|---|---|---|---|
-| 1 | 27/08 | O que eu achava que veria + o que entendi que estudaremos | ✅ pronto |
-| 2 | 27/08 | Por que sua cara fica estranha na câmera frontal? | ✅ pronto |
-| 3 | 03/09 | Quantas vezes dá para salvar um JPEG antes dele morrer? | planejado |
-| 4 | 17/09 | Como o celular sabe exatamente onde está a sua cara? | planejado |
-| 5 | 01/10 | Dá para esconder uma imagem dentro de outra sem ninguém perceber? | planejado |
-| 6 | 15/10 | Se uma ilusão engana você, ela também engana uma IA? | planejado |
-| 7 | 29/10 | Como um videogame inventa uma luz que não existe? | planejado |
-| 8 | 12/11 | Reflexão sobre o blog e a disciplina | planejado |
+> Conteúdo preparado antecipadamente; as datas exibidas correspondem ao cronograma oficial da disciplina.
+
+## Posts
+
+1. **27/08 — Eu achava que Computação Visual era uma coisa. Era umas cinco.**  
+   Expectativas iniciais e relação entre Computação Gráfica, Processamento de Imagens e Visão Computacional.
+
+2. **27/08 — Por que sua cara fica estranha na câmera frontal?**  
+   Perspectiva, distância, distância focal e campo de visão, com demonstração interativa.
+
+3. **03/09 — Quantas vezes dá para salvar um JPEG antes dele morrer?**  
+   Compressão com perda, DCT, quantização e recompressão real em Canvas.
+
+4. **17/09 — Como o celular sabe exatamente onde está a sua cara?**  
+   Face detection, bounding boxes, landmarks e tracking.
+
+5. **01/10 — Dá para esconder uma imagem dentro de outra sem ninguém perceber?**  
+   Esteganografia, RGB, bits e LSB.
+
+6. **15/10 — Se uma ilusão engana você, ela também engana uma IA?**  
+   Percepção humana, contexto visual e adversarial examples.
+
+7. **29/10 — Como um videogame inventa uma luz que não existe?**  
+   Normais, diffuse, specular, shaders e iluminação em tempo real.
+
+8. **12/11 — Depois de oito posts, ainda existe “ver” sem computar?**  
+   Reflexão final conectando as explorações do semestre.
 
 ## Estrutura
 
 ```text
-.
+comp_visual/
 ├── index.html
 ├── README.md
-├── assets
-│   ├── css
+├── .nojekyll
+├── assets/
+│   ├── css/
 │   │   └── style.css
-│   └── js
-│       └── perspective-demo.js
-│   └── images
-│       └── post-02
-│           ├── distancia-focal.jpg
-│           └── perspectiva-grande-angular.jpg
-└── posts
+│   ├── images/
+│   │   └── post-02/
+│   └── js/
+│       ├── perspective-demo.js
+│       ├── post-03-jpeg.js
+│       ├── post-04-face.js
+│       ├── post-05-steg.js
+│       ├── post-06-illusion.js
+│       └── post-07-light.js
+└── posts/
     ├── 01-computacao-visual.html
-    └── 02-camera-frontal-perspectiva.html
+    ├── 02-camera-frontal-perspectiva.html
+    ├── 03-jpeg-recompressao.html
+    ├── 04-deteccao-facial.html
+    ├── 05-esteganografia.html
+    ├── 06-ilusoes-ia.html
+    ├── 07-iluminacao-shaders.html
+    └── 08-reflexao-final.html
 ```
 
-## Publicar no GitHub Pages
+## Tecnologias
 
-1. No repositório, abra **Settings → Pages**.
-2. Em **Build and deployment**, escolha **Deploy from a branch**.
-3. Selecione `main` e a pasta `/ (root)`.
-4. Salve.
-5. O site ficará disponível em:
-   `https://gabrielbuck.github.io/comp_visual/`
+- HTML semântico
+- CSS responsivo
+- JavaScript vanilla
+- Canvas 2D
+- SVG inline para diagramas
+- GitHub Pages
 
-Como o projeto usa somente HTML, CSS e JavaScript, não é necessário instalar dependências nem executar build.
+Não existe etapa de build ou dependência de framework.
 
-## Como adicionar o próximo post
+## Design
 
-1. Duplique um dos arquivos dentro de `posts/`.
-2. Renomeie para `03-nome-do-tema.html`.
-3. Atualize título, data e conteúdo.
-4. Na home (`index.html`), transforme o card correspondente em um post publicado e adicione o link.
-5. Atualize a navegação “post anterior / próximo post”.
+A home e todos os posts compartilham o mesmo sistema visual editorial: fundo off-white, tipografia legível, cards discretos e conteúdo visual usado apenas quando ajuda a explicar o tema.
 
-## Objetivo
+## Manutenção
 
-A proposta é registrar explorações relacionadas a Computação Visual ao longo do semestre, conectando conceitos vistos em aula com aplicações, algoritmos, tecnologias e pequenos experimentos interativos.
+Os caminhos são relativos porque este repositório é publicado como **Project Pages** dentro de `/comp_visual/`. Ao alterar o CSS ou JavaScript principal, atualize a query de cache busting usada nas páginas.
+
+Versão atual de assets: `20260901-final`.

@@ -1,0 +1,1 @@
+(() => { const stage=document.getElementById('steg-stage'); const button=document.getElementById('steg-toggle'); if(!stage||!button)return; button.addEventListener('click',()=>{const on=stage.classList.toggle('reveal');button.setAttribute('aria-pressed',String(on));button.textContent=on?'Esconder mensagem':'Revelar mensagem escondida';}); })();
